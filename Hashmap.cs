@@ -18,14 +18,10 @@ class HashMap{
     
      }
 
-     private int _hash(string word){
+     public  int _hash(string word){
           int hash = 0;
           string lowerWord = word.ToLower();
-          foreach (char c in lowerWord)
-          {  if (char.IsLetter(c)) {
-                hash = (hash * 31 + c) % input_list.Length;
-            }
-          }
+          hash = Math.Abs(lowerWord.GetHashCode())%input_list.Length;
           return hash;
      }
 

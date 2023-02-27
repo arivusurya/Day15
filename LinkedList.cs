@@ -8,7 +8,7 @@ public class Mynode{
     public Mynode next;
     public Mynode(String key){
         this.key = key;
-        this.count =0;
+        this.count =1;
         this.next = null;
 
     }
